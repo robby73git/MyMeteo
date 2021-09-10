@@ -1,0 +1,30 @@
+
+    <!-- <div class="container py-5 h-100"> -->
+          <div class="card shadow-0 border">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-11">{{ itemLocation.name }}</div>
+                    <div class="col-1 align-items-right">
+                        <button (click)="onClick()">x</button>
+                    </div>                    
+                    <!-- <div class="col-1 align-items-right">
+                        <strong style="color:red">x</strong>
+                    </div> -->
+                </div>
+            </div>
+            <div class="card-body p-4">
+                <div class="row">
+                    <div class="col-8">
+                        <p>Current condition: <strong>{{ itemLocation.currentCondition }}</strong></p>
+                        <p>Temperature: <strong>{{ itemLocation.temperature}}°C</strong></p>
+                        <p>Max today: <strong>{{ itemLocation.maxToday }}°C</strong>, Min today: <strong>{{ itemLocation.minToday }}°C</strong></p>
+                    </div>
+                    <div class="col-4">icona</div>
+
+                </div>
+            </div>
+          </div>
+  
+
+  
+  

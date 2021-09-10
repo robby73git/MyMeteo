@@ -1,0 +1,36 @@
+    <div class="card border-dark mb-3">
+        <div class="card-header">Add a location</div>
+        <div class="card-body">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <!-- <input inpLocation type="text" id="form1" class="form-control"> -->
+                    <input type="text" class="form-control" [(ngModel)]="zipCode" placeholder="Enter zipcode here" >
+                </div>
+                <div class="form-group col-md-6" >
+
+                    <button (click)="addLocation()">
+                        Add location
+                    </button> 
+                </div>
+           
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-12" >
+
+              <label>{{ errorMessage }}</label>
+            </div>
+       
+            </div>
+        </div>
+        <p> {{ zipCodeToDelete }}</p>
+        <div *ngIf="zipCode != null">
+            <div *ngFor='let itemLocation of addedLocation'>
+                <app-location [itemLocation]="itemLocation" (deleteEvent)="onDeleteEvent($event)"></app-location>
+    
+            </div>
+        </div>
+       
+    <!-- <div class="container" *ngIf="zipCode">
+        <app-location [zipCode]="zipCode"></app-location>
+    </div> -->
+

@@ -54,7 +54,7 @@ export class AddLocationComponent implements OnInit {
     
     if(regExp.test(this.zipCode)){
       const location = this.allLocation.find(location => location.zipCode == this.zipCode);
-      const exist = this.addedLocation.findIndex(location => location.zipCode == this.zipCode);
+      const added = this.addedLocation.findIndex(location => location.zipCode == this.zipCode);
 
       if (location == null) {
         // this.addedLocation.push(location);
@@ -62,7 +62,7 @@ export class AddLocationComponent implements OnInit {
         console.log('ZipCode non presente');
 
      } else {
-        if (location && exist == -1) {
+        if (location && added == -1) {
         this.addedLocation.push(location);
           console.log('ZipCode inviato');
 
